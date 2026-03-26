@@ -32,9 +32,9 @@ Formulier-ID: `mqegzovw` (in `Contact.jsx`). Voeg in het Formspree-dashboard eve
 
 ## GitHub Pages
 
-- Workflow: `.github/workflows/deploy.yml` (bouwt `dist/` en deployt naar Pages).
-- **`vite.config.js` → `base`**: staat op `"/"` voor een **custom domain** (zie `public/CNAME`).  
-  Gebruik je `https://<user>.github.io/SITESPRINT/`, zet dan `base: "/SITESPRINT/"`.
+- Workflow staat in **`docs/github-pages-deploy.yml`**: kopieer naar `.github/workflows/deploy.yml` (zie **`docs/NIEUWE_REPO_EN_ONLINE.md`**).
+- **`vite.config.js` → `base`**: `"/"` voor **custom domain** (`public/CNAME` → `sitesprint.eu`).  
+  Project-URL `https://<user>.github.io/<repo>/` → zet dan `base: "/<repo>/"`.
 
 ## Logo & favicon
 
