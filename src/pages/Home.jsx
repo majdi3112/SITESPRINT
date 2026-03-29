@@ -17,7 +17,7 @@ export default function Home() {
     const id = location.state?.scrollTo;
     if (!id) return;
     const t = window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
       navigate("/", { replace: true, state: {} });
     }, 50);
     return () => window.clearTimeout(t);

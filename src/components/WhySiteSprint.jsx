@@ -1,7 +1,7 @@
 const points = [
   {
     title: "Conversiegericht",
-    text: "Elke sectie heeft een doel: vertrouwen, duidelijkheid en actie — niet alleen een mooi plaatje.",
+    text: "Elke sectie heeft een doel: vertrouwen, duidelijkheid en actie niet alleen een mooi plaatje.",
     icon: "chart"
   },
   {
@@ -45,7 +45,7 @@ export default function WhySiteSprint() {
   return (
     <section
       id="waarom"
-      className="relative scroll-mt-24 overflow-hidden border-b border-slate-800 bg-midnight py-20 sm:py-28"
+      className="relative overflow-hidden border-b border-slate-800 bg-midnight py-20 sm:py-28"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_35%_at_100%_0%,rgba(99,102,241,0.06),transparent)]" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
@@ -55,7 +55,7 @@ export default function WhySiteSprint() {
             Minder gedoe. <span className="text-slate-300">Meer resultaat.</span>
           </h2>
           <p className="mt-5 max-w-2xl text-lg font-medium leading-relaxed text-slate-300">
-            We combineren strak design met inhoud die verkoopt — zodat bezoekers snappen wat je doet en gemakkelijk de
+            We combineren strak design met inhoud die verkoopt zodat bezoekers snappen wat je doet en gemakkelijk de
             stap zetten.
           </p>
         </div>

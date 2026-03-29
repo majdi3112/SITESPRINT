@@ -60,3 +60,18 @@ De map `.github/workflows/` zit **niet** in deze push, zodat Cursor/IDE-pushes z
 ## 7. HTTPS
 
 Na DNS-propagatie: op de Pages-instellingen **Enforce HTTPS** aanzetten.
+
+## 8. Deploy faalt met **404** (*Failed to create deployment*)
+
+De **build**-job is gelukt (artifact `github-pages`), maar **deploy** geeft 404. Dat betekent vrijwel altijd: **Pages is nog niet op “GitHub Actions” gezet.**
+
+1. Ga naar: `https://github.com/majdi3112/Sitesprint/settings/pages` (pas user/repo aan indien nodig).
+2. Onder **Build and deployment** bij **Source**:
+   - **Niet** “Deploy from a branch” laten staan.
+   - Kies **GitHub Actions**.
+3. Sla op als er een knop is; ververs de pagina en controleer dat **Source** nog steeds **GitHub Actions** is.
+4. Start de workflow opnieuw: tab **Actions** → mislukte run → **Re-run all jobs** (of **Re-run failed jobs**).
+
+Zorg ook dat **Actions** aan staan: **Settings** → **Actions** → **General** → *Allow all actions and reusable workflows* (of de beperkte optie die je organisatie toestaat).
+
+De meldingen over **Node.js 20** zijn waarschuwingen voor later; ze veroorzaken deze 404 niet.

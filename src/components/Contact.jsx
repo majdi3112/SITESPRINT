@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-24 overflow-hidden border-b border-slate-800 py-20 sm:py-28"
+      className="relative overflow-hidden border-b border-slate-800 py-20 sm:py-28"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-midnight via-void to-midnight" />
       <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-cyan-500/[0.04] blur-[100px]" />
@@ -22,7 +22,7 @@ export default function Contact() {
               Laten we jouw site scherp neerzetten
             </h2>
             <p className="mt-5 text-lg font-medium leading-relaxed text-slate-300">
-              Vertel kort wie je bent en wat je nodig hebt. We reageren persoonlijk — geen standaardmailtjes.
+              Vertel kort wie je bent en wat je nodig hebt. We reageren persoonlijk geen standaardmailtjes.
             </p>
             <div className="relative mt-10 overflow-hidden rounded-2xl border border-slate-700">
               <img

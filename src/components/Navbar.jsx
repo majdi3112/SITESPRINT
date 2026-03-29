@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Logo } from "./Logo";
+import { useAutoHideHeader } from "../hooks/useAutoHideHeader";
 
 const sections = [
   { id: "waarom", label: "Waarom" },
@@ -11,7 +12,7 @@ const sections = [
 ];
 
 function scrollToId(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
 
 export default function Navbar() {
@@ -20,6 +21,7 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === "/";
+  const { headerRef, spacerHeight, isHidden } = useAutoHideHeader({ pinnedOpen: open });
 
   useEffect(() => {
     if (!isHome) return;
@@ -46,7 +48,18 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-700/80 bg-void/95 backdrop-blur-md">
+    <>
+      <div
+        aria-hidden
+        className={spacerHeight ? "shrink-0" : "min-h-[4.25rem] shrink-0 sm:min-h-[4.5rem]"}
+        style={spacerHeight ? { height: spacerHeight } : undefined}
+      />
+      <header
+        ref={headerRef}
+        className={`fixed left-0 right-0 top-0 z-50 border-b border-slate-700/80 bg-void/95 backdrop-blur-md transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${
+          isHidden ? "pointer-events-none -translate-y-full opacity-0" : "translate-y-0 opacity-100"
+        }`}
+      >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
         <Link
           to="/"
@@ -126,5 +139,6 @@ export default function Navbar() {
         </div>
       ) : null}
     </header>
+    </>
   );
 }

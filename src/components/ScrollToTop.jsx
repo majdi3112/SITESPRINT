@@ -9,6 +9,10 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    document.documentElement.dataset.scrollContext = pathname.startsWith("/demos/") ? "demo" : "site";
+  }, [pathname]);
+
+  useEffect(() => {
     const run = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
       document.documentElement.scrollTop = 0;

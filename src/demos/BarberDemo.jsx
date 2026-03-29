@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DemoTopChrome from "../components/DemoTopChrome";
 
 const nav = [
   { id: "top", label: "Home" },
@@ -17,7 +18,7 @@ const heroImg =
 const treatments = [
   {
     name: "Haircut",
-    desc: "Consult, wassen, knippen en stylen — strakke fade of klassiek, precies zoals jij het wilt.",
+    desc: "Consult, wassen, knippen en stylen strakke fade of klassiek, precies zoals jij het wilt.",
     price: "32",
     duration: "45 min",
     icon: "scissors"
@@ -38,7 +39,7 @@ const treatments = [
   },
   {
     name: "Hot towel shave",
-    desc: "Traditioneel met warme doeken, rich lather en mes — glad als glas, zero irritatie.",
+    desc: "Traditioneel met warme doeken, rich lather en mes glad als glas, zero irritatie.",
     price: "28",
     duration: "35 min",
     icon: "blade"
@@ -83,7 +84,7 @@ const reviews = [
   },
   {
     name: "Kevin M.",
-    text: "Premium producten, geen haast. De hot towel shave is next level — aanrader voor een cadeaumoment.",
+    text: "Premium producten, geen haast. De hot towel shave is next level aanrader voor een cadeaumoment.",
     stars: 5
   },
   {
@@ -185,12 +186,12 @@ export default function BarberDemo() {
 
   const scrollToId = (id) => {
     setMobileOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   };
 
   return (
     <div className="min-h-screen bg-[#09090b] text-zinc-100">
-      <div className="sticky top-0 z-[100] isolate">
+      <DemoTopChrome mobileMenuOpen={mobileOpen}>
         <div className="border-b border-white/10 bg-zinc-950/95 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-xl backdrop-saturate-150">
           <div className="mx-auto flex min-h-[2.75rem] max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2.5 sm:min-h-0">
             <Link
@@ -290,7 +291,7 @@ export default function BarberDemo() {
           </div>
         ) : null}
       </header>
-      </div>
+      </DemoTopChrome>
 
       <main>
         {/* Hero */}
@@ -319,8 +320,7 @@ export default function BarberDemo() {
                   Geen gedoe.
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
-                  Klassieke service met moderne afwerking. Vakmanschap, precisie en premium verzorging — boek vandaag je
-                  afspraak en loop scherp naar buiten.
+                  Klassieke service met een moderne afwerking. Vakmanschap, precisie en premium verzorging. Boek vandaag je afspraak en loop scherp naar buiten.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -397,10 +397,10 @@ export default function BarberDemo() {
                 <p className="mt-6 leading-relaxed text-zinc-400">
                   Geen chain-store vibes. North Cut is gebouwd op ambacht: messen die scherp zijn, stoelen die comfort
                   geven, en barbers die luisteren voordat ze knippen. Onze ruimte in Gent combineert industriële elementen
-                  met warm licht — stoer genoeg voor een fade, relaxed genoeg voor je eerste bezoek.
+                  met warm licht stoer genoeg voor een fade, relaxed genoeg voor je eerste bezoek.
                 </p>
                 <p className="mt-4 leading-relaxed text-zinc-400">
-                  We werken uitsluitend met merken die we zelf gebruiken. Geen shortcuts, geen haast-knipsels: alleen werk
+                  We werken uitsluitend met merken die we zelf gebruiken. Geen shortcuts, geen haast knipsels: alleen werk
                   waar we achter staan.
                 </p>
                 <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/10 pt-10">
@@ -443,7 +443,7 @@ export default function BarberDemo() {
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-500">Behandelingen</p>
               <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">Wat we voor je doen</h2>
               <p className="mx-auto mt-4 max-w-2xl text-zinc-400">
-                Van snelle touch-up tot full service — altijd met dezelfde aandacht voor detail.
+                Van snelle touch-up tot full service. Altijd met dezelfde aandacht voor detail.
               </p>
             </Reveal>
 
@@ -573,7 +573,7 @@ export default function BarberDemo() {
                   <div className="p-8 lg:p-12">
                     <h2 className="text-3xl font-black text-white sm:text-4xl">Openingstijden &amp; afspraak</h2>
                     <p className="mt-4 text-zinc-400">
-                      Boek online voor de zekerheid — of loop binnen als er een stoel vrij is.
+                      Boek online voor de zekerheid of loop binnen als er een stoel vrij is.
                     </p>
                     <ul className="mt-10 space-y-6">
                       <li className="flex gap-4">
@@ -712,7 +712,7 @@ export default function BarberDemo() {
                   ))}
                 </div>
                 <p className="mt-8 text-sm font-semibold italic text-zinc-500">
-                  Look sharp. Stay sharp. — North Cut
+                  Look sharp. Stay sharp. North Cut
                 </p>
               </div>
             </div>

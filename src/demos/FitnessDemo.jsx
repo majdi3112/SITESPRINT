@@ -1,5 +1,6 @@
 import { useEffect, useId, useState } from "react";
 import { Link } from "react-router-dom";
+import DemoTopChrome from "../components/DemoTopChrome";
 
 /** VOLT Studio monogram (demo-merk; los van SiteSprint M&N-logo). */
 function VoltStudioMark({ className = "h-9 w-9" }) {
@@ -48,7 +49,7 @@ const trainers = [
   {
     name: "Daan Vermeulen",
     role: "Kracht & powerlifting",
-    bio: "NSCA-gecertificeerd. Jouw techniek en progressie staan centraal — van eerste deadlift tot wedstrijdvoorbereiding.",
+    bio: "NSCA-gecertificeerd. Jouw techniek en progressie staan centraal van eerste deadlift tot wedstrijdvoorbereiding.",
     img: "https://images.unsplash.com/photo-1567012477007-b7e3b79ac6cc?auto=format&fit=crop&q=80&w=600"
   },
   {
@@ -60,7 +61,7 @@ const trainers = [
   {
     name: "Marc Janssen",
     role: "Mobiliteit & herstel",
-    bio: "Voorkom blessures en train duurzamer met gerichte mobility work en recovery — perfect naast zware dagen.",
+    bio: "Voorkom blessures en train duurzamer met gerichte mobility work en recovery. Perfect naast zware dagen.",
     img: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=600"
   }
 ];
@@ -123,7 +124,7 @@ const plans = [
 const why = [
   {
     title: "Moderne apparatuur",
-    desc: "Technogym en free weights zones — onderhouden alsof het dagelijks jouw eerste training is.",
+    desc: "Technogym en free weights zones onderhouden alsof het dagelijks jouw eerste training is.",
     icon: "dumbbell"
   },
   {
@@ -146,7 +147,7 @@ const why = [
 const lessons = [
   {
     title: "HYROX & conditie",
-    desc: "Hoge intensiteit, sled pushes en roeien — bouw een motor die niet opgeeft.",
+    desc: "Hoge intensiteit, sled pushes en roeien bouw een motor die niet opgeeft.",
     img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -264,13 +265,12 @@ export default function FitnessDemo() {
   const scrollToId = (id) => {
     setMobileOpen(false);
     const el = document.getElementById(id);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    el?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   };
 
   return (
     <div className="min-h-screen bg-[#070b14] text-slate-100">
-      {/* Sticky: demo-contextbalk + site-header blijven samen bovenaan */}
-      <div className="sticky top-0 z-[100] isolate">
+      <DemoTopChrome mobileMenuOpen={mobileOpen}>
         <div className="border-b border-white/10 bg-[#0a1020]/95 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150">
           <div className="mx-auto flex min-h-[2.75rem] max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2.5 sm:min-h-0">
             <Link
@@ -373,7 +373,7 @@ export default function FitnessDemo() {
           </div>
         ) : null}
       </header>
-      </div>
+      </DemoTopChrome>
 
       <main>
         {/* Hero */}
@@ -402,7 +402,7 @@ export default function FitnessDemo() {
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
                   Bereik jouw doel met coaching, groepslessen en topapparatuur. Start vandaag met een{" "}
-                  <span className="font-semibold text-slate-200">gratis proefweek</span> — geen verplichtingen.
+                  <span className="font-semibold text-slate-200">gratis proefweek</span> geen verplichtingen.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -460,7 +460,7 @@ export default function FitnessDemo() {
                 <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-[#0c1224]/85 p-4 backdrop-blur-md sm:left-auto sm:right-6 sm:w-64">
                   <p className="text-xs font-bold uppercase tracking-wider text-teal-400">Vandaag in de club</p>
                   <p className="mt-1 text-2xl font-black text-white">HYROX prep · 18:30</p>
-                  <p className="mt-1 text-sm text-slate-400">Nog 4 plekken vrij — boek via de app</p>
+                  <p className="mt-1 text-sm text-slate-400">Nog 4 plekken vrij boek via de app</p>
                 </div>
               </div>
             </Reveal>

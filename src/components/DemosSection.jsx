@@ -28,7 +28,7 @@ export default function DemosSection() {
   return (
     <section
       id="demos"
-      className="relative scroll-mt-24 overflow-hidden border-b border-slate-800 bg-void py-20 sm:py-28"
+      className="relative overflow-hidden border-b border-slate-800 bg-void py-20 sm:py-28"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_0%_50%,rgba(34,211,238,0.05),transparent)]" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
@@ -39,7 +39,7 @@ export default function DemosSection() {
               Zie wat we bouwen
             </h2>
             <p className="mt-5 text-lg font-medium leading-relaxed text-slate-300">
-              Drie voorbeeldsites die je live kunt doorlopen — elk met meerdere secties, echte copy en
+              Drie voorbeeldsites die je live kunt doorlopen elk met meerdere secties, echte copy en
               conversiegerichte opbouw.
             </p>
           </div>

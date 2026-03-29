@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DemoTopChrome from "../components/DemoTopChrome";
 
 const nav = [
   { id: "top", label: "Home" },
@@ -17,7 +18,7 @@ const heroImg =
 const menuVoorgerechten = [
   {
     name: "Burrata & vijgen",
-    desc: "Creamige burrata, geroosterde vijg, honing en pistache — een zacht begin van de avond.",
+    desc: "Creamige burrata, geroosterde vijg, honing en pistache een zacht begin van de avond.",
     price: "16",
     img: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&q=80&w=600"
   },
@@ -71,7 +72,7 @@ const menuDesserts = [
   },
   {
     name: "Sorbet trio",
-    desc: "Citroen, framboos en basilicum — verfrissend en licht.",
+    desc: "Citroen, framboos en basilicum verfrissend en licht.",
     price: "8",
     img: "https://images.unsplash.com/photo-1501443762994-3bd181d8e330?auto=format&fit=crop&q=80&w=600"
   }
@@ -104,7 +105,7 @@ const signatures = [
 const reviews = [
   {
     name: "Charlotte & Willem",
-    text: "Een avond vol smaak, sfeer en aandacht. De bediening voelde persoonlijk — alsof we bij vrienden aan tafel zaten.",
+    text: "Een avond vol smaak, sfeer en aandacht. De bediening voelde persoonlijk alsof we bij vrienden aan tafel zaten.",
     stars: 5
   },
   {
@@ -202,12 +203,12 @@ export default function RestaurantDemo() {
 
   const scrollToId = (id) => {
     setMobileOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   };
 
   return (
     <div className="min-h-screen bg-[#f6f0e8] text-stone-800">
-      <div className="sticky top-0 z-[100] isolate">
+      <DemoTopChrome mobileMenuOpen={mobileOpen}>
         <div className="border-b border-stone-200/90 bg-[#faf6ef]/95 shadow-[0_8px_28px_rgba(44,10,16,0.08)] backdrop-blur-xl backdrop-saturate-150">
           <div className="mx-auto flex min-h-[2.75rem] max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2.5 sm:min-h-0">
             <Link
@@ -311,7 +312,7 @@ export default function RestaurantDemo() {
           </div>
         ) : null}
       </header>
-      </div>
+      </DemoTopChrome>
 
       <main>
         {/* Hero */}
@@ -333,7 +334,7 @@ export default function RestaurantDemo() {
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
                   Verse ingrediënten, seizoensgerechten en gastvrijheid op topniveau. Beleef een avond vol smaak, sfeer
-                  en aandacht — precies zoals Italië bedoeld is.
+                  en aandacht precies zoals Italië bedoeld is.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -385,7 +386,7 @@ export default function RestaurantDemo() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2c0a10]/75 via-[#2c0a10]/15 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                   <p className="font-display text-2xl text-[#f5e6c8] sm:text-3xl">“Waar elke maaltijd een moment wordt.”</p>
-                  <p className="mt-2 text-sm text-stone-300">— Chef Marco, sinds 1998 in de keuken</p>
+                  <p className="mt-2 text-sm text-stone-300">Chef Marco, sinds 1998 in de keuken</p>
                 </div>
               </div>
             </Reveal>
@@ -403,7 +404,7 @@ export default function RestaurantDemo() {
                 </h2>
                 <p className="mt-6 text-stone-600 leading-relaxed">
                   Osteria Nova begon als droom van de familie Romano: echte smaken uit Puglia, zonder compromis. We werken
-                  met kleine leveranciers die we persoonlijk kennen — vis van de haven, groenten van het seizoen, olijfolie
+                  met kleine leveranciers die we persoonlijk kennen vis van de haven, groenten van het seizoen, olijfolie
                   van de boerderij van nonna.
                 </p>
                 <p className="mt-4 text-stone-600 leading-relaxed">
@@ -450,7 +451,7 @@ export default function RestaurantDemo() {
                 Een selectie van onze favorieten
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-stone-600">
-                Elk gerecht wordt met zorg bereid. Vraag naar allergenen — ons team helpt u graag.
+                Elk gerecht wordt met zorg bereid. Vraag naar allergenen ons team helpt u graag.
               </p>
             </Reveal>
 
@@ -561,7 +562,7 @@ export default function RestaurantDemo() {
                 Sfeer, licht en gezelligheid
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-stone-600">
-                Van de eerste aperitivo tot het laatste dessert — ontdek de ambiance van Osteria Nova.
+                Van de eerste aperitivo tot het laatste dessert  ontdek de ambiance van Osteria Nova.
               </p>
             </Reveal>
             <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
@@ -740,7 +741,7 @@ export default function RestaurantDemo() {
                 <p className="mt-8 font-display text-lg italic text-[#f5e6c8]/90">
                   “A tavola, non si invecchia.”
                 </p>
-                <p className="mt-1 text-xs text-stone-500">Aan tafel veroudert men niet — Italiaans gezegde</p>
+                <p className="mt-1 text-xs text-stone-500">Aan tafel veroudert men niet Italiaans gezegde</p>
               </div>
             </div>
             <p className="mt-14 border-t border-white/10 pt-8 text-center text-xs text-stone-600">

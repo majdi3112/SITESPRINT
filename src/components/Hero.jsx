@@ -40,7 +40,7 @@ export default function Hero() {
             className="motion-safe:animate-hero-text-in mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-200/95 sm:text-xl"
             style={{ animationDelay: "0.38s", opacity: 0 }}
           >
-            SiteSprint ontwerpt en bouwt strakke, snelle sites voor lokale bedrijven — met een helder verhaal en een
+            SiteSprint ontwerpt en bouwt strakke, snelle sites voor lokale bedrijven met een helder verhaal en een
             duidelijke weg naar contact.
           </p>
 
@@ -52,7 +52,7 @@ export default function Hero() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
               }}
               className="group inline-flex items-center justify-center rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-slate-900 shadow-lg shadow-black/20 motion-safe:transition motion-safe:duration-200 hover:bg-slate-100"
             >
@@ -71,7 +71,7 @@ export default function Hero() {
               href="#demos"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("demos")?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById("demos")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
               }}
               className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-[2px] motion-safe:transition motion-safe:duration-200 hover:border-white/40 hover:bg-white/10"
             >

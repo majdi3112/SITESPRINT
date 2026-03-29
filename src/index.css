@@ -6,6 +6,44 @@ html {
   scroll-behavior: smooth;
 }
 
+/*
+ * Anchor scroll offset for sticky headers (navbar + demo context bar).
+ * data-scroll-context wordt gezet in ScrollToTop.jsx (site | demo).
+ */
+:root {
+  --scroll-anchor-site: 5.75rem;
+  --scroll-anchor-demo: 10.5rem;
+  --scroll-anchor-demo-lg: 8.75rem;
+}
+
+html[data-scroll-context="site"] {
+  scroll-padding-top: var(--scroll-anchor-site);
+}
+
+html[data-scroll-context="demo"] {
+  scroll-padding-top: var(--scroll-anchor-demo);
+}
+
+@media (min-width: 1024px) {
+  html[data-scroll-context="demo"] {
+    scroll-padding-top: var(--scroll-anchor-demo-lg);
+  }
+}
+
+html[data-scroll-context="site"] :is(section[id], footer[id]) {
+  scroll-margin-top: var(--scroll-anchor-site);
+}
+
+html[data-scroll-context="demo"] :is(section[id], footer[id]) {
+  scroll-margin-top: var(--scroll-anchor-demo);
+}
+
+@media (min-width: 1024px) {
+  html[data-scroll-context="demo"] :is(section[id], footer[id]) {
+    scroll-margin-top: var(--scroll-anchor-demo-lg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

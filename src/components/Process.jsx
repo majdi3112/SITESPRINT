@@ -2,7 +2,7 @@ const steps = [
   {
     n: "01",
     title: "Kennismaking",
-    text: "We bespreken je doelen, doelgroep en wat bezoekers op je site moeten doen — helder en zonder omwegen."
+    text: "We bespreken je doelen, doelgroep en wat bezoekers op je site moeten doen  helder en zonder omwegen."
   },
   {
     n: "02",
@@ -20,7 +20,7 @@ export default function Process() {
   return (
     <section
       id="werkwijze"
-      className="relative scroll-mt-24 overflow-hidden border-b border-white/[0.06] py-20 sm:py-28"
+      className="relative overflow-hidden border-b border-white/[0.06] py-20 sm:py-28"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-slate-200 via-slate-100 to-white" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.06),transparent_50%)]" />
@@ -51,7 +51,7 @@ export default function Process() {
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
             }}
             className="inline-flex rounded-2xl border-2 border-navy/15 bg-navy px-8 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-slate-800"
           >

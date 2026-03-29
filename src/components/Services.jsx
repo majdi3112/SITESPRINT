@@ -11,7 +11,7 @@ const items = [
   },
   {
     title: "Landingspagina",
-    desc: "Eén krachtige pagina voor campagnes, leads of boekingen — gericht op één duidelijke actie.",
+    desc: "Eén krachtige pagina voor campagnes, leads of boekingen  gericht op één duidelijke actie.",
     icon: "target"
   }
 ];
@@ -53,7 +53,7 @@ export default function Services() {
   return (
     <section
       id="diensten"
-      className="relative scroll-mt-24 overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-slate-100 to-white py-20 sm:py-28"
+      className="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-slate-100 to-white py-20 sm:py-28"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35] bg-grid-subtle"
@@ -88,7 +88,7 @@ export default function Services() {
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
                 }}
                 className="mt-6 inline-flex items-center text-sm font-bold text-cyan-800 transition hover:text-indigo-800"
               >
