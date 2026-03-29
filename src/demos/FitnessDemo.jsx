@@ -280,7 +280,7 @@ export default function FitnessDemo() {
               ← Terug naar SiteSprint
             </Link>
             <span className="rounded-full border border-teal-500/30 bg-teal-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-200 sm:text-xs">
-              Voorbeeldsite — fitness
+              Voorbeeldsite - fitness
             </span>
           </div>
         </div>
@@ -483,7 +483,7 @@ export default function FitnessDemo() {
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-center text-slate-400">
                 Twee verdiepingen training, aparte cardio-zone en krachtruimte. Persoonlijke begeleiding wanneer je
-                het nodig hebt — zonder wachtlijsten voor een praatje.
+                het nodig hebt. Zonder wachtlijsten voor een praatje.
               </p>
             </Reveal>
 
@@ -517,7 +517,7 @@ export default function FitnessDemo() {
                 Kies het pakket dat bij jouw doelen past
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-center text-slate-400">
-                Alle abonnementen maandelijks opzegbaar. Geen verborgen kosten — je weet vooraf waar je aan toe bent.
+                Alle abonnementen maandelijks opzegbaar. Geen verborgen kosten. Je weet vooraf waar je aan toe bent.
               </p>
             </Reveal>
 
@@ -661,7 +661,7 @@ export default function FitnessDemo() {
                 Alles onder één dak
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-center text-slate-400">
-                Van hartslagzones tot krachtplatform — train hoe jij wilt. Groepslessen worden wekelijks vernieuwd.
+                Van hartslagzones tot krachtplatform. Train hoe jij wilt. Groepslessen worden wekelijks vernieuwd.
               </p>
             </Reveal>
 

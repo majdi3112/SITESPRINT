@@ -66,7 +66,7 @@ export default function Services() {
             Wat we voor jou bouwen
           </h2>
           <p className="mt-5 max-w-2xl text-lg font-medium leading-relaxed text-slate-700">
-            Kies wat bij je fase past. Alles wordt als snelle, moderne frontend opgeleverd — klaar voor hosting zonder
+            Kies wat bij je fase past. Alles wordt als snelle, moderne frontend opgeleverd klaar voor hosting zonder
             gedoe.
           </p>
         </div>

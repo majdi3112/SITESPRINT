@@ -31,7 +31,7 @@ export default function Process() {
             Zo pakken we het aan
           </h2>
           <p className="mt-5 max-w-2xl text-lg font-medium leading-relaxed text-slate-700">
-            Duidelijke fases, voorspelbare planning — jij weet altijd waar we staan.
+            Duidelijke fases, voorspelbare planning jij weet altijd waar we staan.
           </p>
         </div>
         <ol className="mt-16 grid gap-8 md:grid-cols-3" data-reveal-stagger>

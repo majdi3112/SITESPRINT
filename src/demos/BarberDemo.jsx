@@ -65,7 +65,7 @@ const barbers = [
   {
     name: "Rico Mendes",
     role: "Fade & design",
-    bio: "Van skin fade tot creative patterns — als het scherp moet, zit je bij Rico goed.",
+    bio: "Van skin fade tot creative patterns  als het scherp moet, zit je bij Rico goed.",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600"
   },
   {
@@ -378,7 +378,7 @@ export default function BarberDemo() {
                 <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-[#0c0c0f]/90 p-4 backdrop-blur-md">
                   <p className="text-xs font-bold uppercase tracking-wider text-amber-500">Vandaag nog plek</p>
                   <p className="mt-1 text-xl font-black text-white">15:30 · 16:15 · 17:00</p>
-                  <p className="mt-1 text-sm text-zinc-500">Bij Jay &amp; Rico — boek via de site</p>
+                  <p className="mt-1 text-sm text-zinc-500">Bij Jay &amp; Rico  boek via de site</p>
                 </div>
               </div>
             </Reveal>
@@ -644,7 +644,7 @@ export default function BarberDemo() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/50 to-transparent lg:bg-gradient-to-l" />
                   <div className="relative flex h-full min-h-[280px] flex-col justify-end p-8 lg:p-12">
                     <p className="text-sm font-bold uppercase tracking-wider text-amber-500">Walk-ins</p>
-                    <p className="mt-2 text-2xl font-black text-white">Kom langs — we helpen je direct.</p>
+                    <p className="mt-2 text-2xl font-black text-white">Kom langs we helpen je direct.</p>
                   </div>
                 </Reveal>
               </div>
