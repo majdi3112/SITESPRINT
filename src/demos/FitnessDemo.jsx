@@ -50,13 +50,13 @@ const trainers = [
     name: "Daan Vermeulen",
     role: "Kracht & powerlifting",
     bio: "NSCA-gecertificeerd. Jouw techniek en progressie staan centraal van eerste deadlift tot wedstrijdvoorbereiding.",
-    img: "https://images.unsplash.com/photo-1567012477007-b7e3b79ac6cc?auto=format&fit=crop&q=80&w=600"
+    img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600"
   },
   {
     name: "Sofie De Wilde",
     role: "HIIT & vetverbranding",
     bio: "Energieke sessies die resultaat en plezier combineren. Ideaal als je snel structuur en motivatie zoekt.",
-    img: "https://images.unsplash.com/photo-1594381898411-e846f7a19472?auto=format&fit=crop&q=80&w=600"
+    img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=600"
   },
   {
     name: "Marc Janssen",
