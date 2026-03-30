@@ -11,14 +11,14 @@ const demos = [
   {
     slug: "restaurant",
     title: "Restaurant",
-    desc: "Warme horeca-ervaring: menu, specialiteiten, galerij, reserveringen en sociaal bewijs.",
+    desc: "Warme horeca ervaring: menu, specialiteiten, galerij, reserveringen en sociaal bewijs.",
     image: "/previews/restaurant.svg",
     accent: "from-rose-500/25 to-amber-600/20"
   },
   {
     slug: "barber",
     title: "Kapsalon",
-    desc: "Strakke barbershop: behandelingen, prijzen, team, reviews en duidelijke boek-CTA.",
+    desc: "Strakke barbershop: behandelingen, prijzen, team, reviews en duidelijke boek CTA.",
     image: "/previews/barber.svg",
     accent: "from-slate-400/20 to-zinc-700/25"
   }

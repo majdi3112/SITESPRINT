@@ -1,3 +1,5 @@
+import { scrollToSection } from "../utils/scrollToSection";
+
 const steps = [
   {
     n: "01",
@@ -51,7 +53,7 @@ export default function Process() {
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+              scrollToSection("contact");
             }}
             className="inline-flex rounded-2xl border-2 border-navy/15 bg-navy px-8 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-slate-800"
           >

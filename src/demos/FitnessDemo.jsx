@@ -1,6 +1,7 @@
 import { useEffect, useId, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import DemoTopChrome from "../components/DemoTopChrome";
+import { scrollToSection } from "../utils/scrollToSection";
 
 /** VOLT Studio monogram (demo-merk; los van SiteSprint M&N-logo). */
 function VoltStudioMark({ className = "h-9 w-9" }) {
@@ -230,6 +231,16 @@ function Reveal({ children, className = "" }) {
 export default function FitnessDemo() {
   const [activeNav, setActiveNav] = useState("top");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const id = location.hash ? location.hash.slice(1) : null;
+    if (!id) return;
+    const t = window.setTimeout(() => {
+      scrollToSection(id);
+    }, 120);
+    return () => window.clearTimeout(t);
+  }, [location.hash]);
 
   useEffect(() => {
     const nodes = document.querySelectorAll("[data-reveal]");
@@ -264,8 +275,7 @@ export default function FitnessDemo() {
 
   const scrollToId = (id) => {
     setMobileOpen(false);
-    const el = document.getElementById(id);
-    el?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    scrollToSection(id);
   };
 
   return (

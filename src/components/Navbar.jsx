@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Logo } from "./Logo";
 import { useAutoHideHeader } from "../hooks/useAutoHideHeader";
+import { scrollToSection } from "../utils/scrollToSection";
 
 const sections = [
   { id: "waarom", label: "Waarom" },
@@ -10,10 +11,6 @@ const sections = [
   { id: "werkwijze", label: "Werkwijze" },
   { id: "contact", label: "Contact" }
 ];
-
-function scrollToId(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -41,7 +38,7 @@ export default function Navbar() {
   function goSection(id) {
     setOpen(false);
     if (isHome) {
-      scrollToId(id);
+      scrollToSection(id);
     } else {
       navigate("/", { state: { scrollTo: id } });
     }
@@ -55,6 +52,7 @@ export default function Navbar() {
         style={spacerHeight ? { height: spacerHeight } : undefined}
       />
       <header
+        id="site-header"
         ref={headerRef}
         className={`fixed left-0 right-0 top-0 z-50 border-b border-slate-700/80 bg-void/95 backdrop-blur-md transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${
           isHidden ? "pointer-events-none -translate-y-full opacity-0" : "translate-y-0 opacity-100"

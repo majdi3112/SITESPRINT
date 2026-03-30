@@ -8,12 +8,12 @@ html {
 
 /*
  * Anchor scroll offset for sticky headers (navbar + demo context bar).
- * data-scroll-context wordt gezet in ScrollToTop.jsx (site | demo).
+ * We use a dynamic CSS variable set by useAutoHideHeader.js, with fallbacks.
  */
 :root {
-  --scroll-anchor-site: 5.75rem;
-  --scroll-anchor-demo: 10.5rem;
-  --scroll-anchor-demo-lg: 8.75rem;
+  --scroll-anchor-site: var(--dynamic-header-height, 6rem);
+  --scroll-anchor-demo: var(--dynamic-header-height, 10.5rem);
+  --scroll-anchor-demo-lg: var(--dynamic-header-height, 8.75rem);
 }
 
 html[data-scroll-context="site"] {

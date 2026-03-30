@@ -16,6 +16,7 @@ export default function DemoTopChrome({ mobileMenuOpen, children }) {
         style={spacerHeight ? { height: spacerHeight } : undefined}
       />
       <div
+        id="site-header"
         ref={headerRef}
         className={`fixed left-0 right-0 top-0 z-[100] isolate transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${
           isHidden ? "pointer-events-none -translate-y-full opacity-0" : "translate-y-0 opacity-100"

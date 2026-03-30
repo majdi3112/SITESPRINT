@@ -1,3 +1,5 @@
+import { scrollToSection } from "../utils/scrollToSection";
+
 const heroImage =
   "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=85&w=2400";
 
@@ -52,7 +54,7 @@ export default function Hero() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                scrollToSection("contact");
               }}
               className="group inline-flex items-center justify-center rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-slate-900 shadow-lg shadow-black/20 motion-safe:transition motion-safe:duration-200 hover:bg-slate-100"
             >
@@ -71,7 +73,7 @@ export default function Hero() {
               href="#demos"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("demos")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                scrollToSection("demos");
               }}
               className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-[2px] motion-safe:transition motion-safe:duration-200 hover:border-white/40 hover:bg-white/10"
             >

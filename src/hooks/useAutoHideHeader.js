@@ -16,7 +16,11 @@ export function useAutoHideHeader(options = {}) {
   useLayoutEffect(() => {
     const el = headerRef.current;
     if (!el) return;
-    const measure = () => setSpacerHeight(el.offsetHeight);
+    const measure = () => {
+      const h = el.offsetHeight;
+      setSpacerHeight(h);
+      document.documentElement.style.setProperty('--dynamic-header-height', `${h}px`);
+    };
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);

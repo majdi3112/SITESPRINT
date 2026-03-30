@@ -8,20 +8,23 @@ import DemosSection from "../components/DemosSection";
 import Process from "../components/Process";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { scrollToSection } from "../utils/scrollToSection";
 
 export default function Home() {
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const id = location.state?.scrollTo;
+    const id = location.state?.scrollTo || (location.hash ? location.hash.slice(1) : null);
     if (!id) return;
     const t = window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-      navigate("/", { replace: true, state: {} });
-    }, 50);
+      scrollToSection(id);
+      if (location.state?.scrollTo) {
+        navigate(location.pathname + location.hash, { replace: true, state: {} });
+      }
+    }, 120);
     return () => window.clearTimeout(t);
-  }, [location.state, navigate]);
+  }, [location.state, location.hash, location.pathname, navigate]);
 
   useEffect(() => {
     const nodes = document.querySelectorAll("[data-reveal], [data-reveal-stagger]");

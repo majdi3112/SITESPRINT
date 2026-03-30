@@ -1,3 +1,5 @@
+import { scrollToSection } from "../utils/scrollToSection";
+
 const items = [
   {
     title: "Zakelijke website",
@@ -88,7 +90,7 @@ export default function Services() {
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                  scrollToSection("contact");
                 }}
                 className="mt-6 inline-flex items-center text-sm font-bold text-cyan-800 transition hover:text-indigo-800"
               >
