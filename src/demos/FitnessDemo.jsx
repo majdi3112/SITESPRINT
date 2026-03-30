@@ -737,8 +737,8 @@ export default function FitnessDemo() {
         </section>
 
         {/* Footer */}
-        <footer id="contact" className="border-t border-white/[0.06] bg-[#050810] py-16">
-          <div className="mx-auto max-w-6xl px-4">
+        <footer id="contact" className="flex min-h-[100svh] flex-col justify-center border-t border-white/[0.06] bg-[#050810] py-16">
+          <div className="mx-auto w-full max-w-6xl px-4">
             <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
               <div>
                 <div className="flex items-center gap-3">

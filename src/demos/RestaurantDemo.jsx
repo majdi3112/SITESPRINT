@@ -597,9 +597,9 @@ export default function RestaurantDemo() {
         {/* Reserveren */}
         <section
           id="reserveren"
-          className="border-b border-stone-200/60 bg-gradient-to-br from-[#efe6d8] via-[#f6f0e8] to-[#f0e4dc] py-20"
+          className="flex min-h-[100svh] flex-col justify-center border-b border-stone-200/60 bg-gradient-to-br from-[#efe6d8] via-[#f6f0e8] to-[#f0e4dc] py-20"
         >
-          <div className="mx-auto max-w-6xl px-4">
+          <div className="mx-auto w-full max-w-6xl px-4">
             <div className="overflow-hidden rounded-[2rem] border border-stone-200/80 bg-white shadow-[0_24px_64px_rgba(44,10,16,0.1)]">
               <div className="grid lg:grid-cols-2">
                 <div className="relative min-h-[280px] lg:min-h-full">

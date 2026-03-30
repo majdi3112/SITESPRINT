@@ -9,12 +9,12 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-b border-slate-800 py-20 sm:py-28"
+      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden border-b border-slate-800 py-20 sm:py-28"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-midnight via-void to-midnight" />
       <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-cyan-500/[0.04] blur-[100px]" />
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
           <div data-reveal>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-cyan-300">Contact</p>

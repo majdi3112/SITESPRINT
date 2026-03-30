@@ -575,9 +575,9 @@ export default function BarberDemo() {
         {/* Afspraak */}
         <section
           id="afspraak"
-          className="border-b border-white/[0.06] bg-gradient-to-br from-amber-950/30 via-[#09090b] to-[#0c0c0f] py-20"
+          className="flex min-h-[100svh] flex-col justify-center border-b border-white/[0.06] bg-gradient-to-br from-amber-950/30 via-[#09090b] to-[#0c0c0f] py-20"
         >
-          <div className="mx-auto max-w-6xl px-4">
+          <div className="mx-auto w-full max-w-6xl px-4">
             <div className="overflow-hidden rounded-[2rem] border border-amber-500/20 bg-[#0c0c0f] shadow-[0_24px_80px_-20px_rgba(245,158,11,0.2)]">
               <div className="grid lg:grid-cols-2">
                 <Reveal>
